@@ -4,7 +4,6 @@
 
 using namespace std;
 
-
 int main() {
     int n;
     cin >> n;
@@ -26,8 +25,9 @@ int main() {
         for (int v = 1; v <= n; v++) {
             if (!visited[v] && adj[u][v]) {
                 visited[v] = true;
+                st.push(u);
                 st.push(v);
-                break;
+                break; // chỉ lấy 1 đỉnh bất kỳ
             }
         }
     }
