@@ -24,7 +24,7 @@ int main() {
         st.pop();
         cout << u << " ";
         for (int v = 1; v <= n; v++) {
-            if (!visited[v] && adj[v]) {
+            if (!visited[v] && adj[u][v]) {
                 visited[v] = true;
                 st.push(v);
                 break;
