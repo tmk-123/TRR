@@ -13,7 +13,7 @@ bool dfs(int u, vector<vector<int>> a, vector<bool> &visited, vector<int>& path)
     path.push_back(u);
     
     if (u == t) return true;
-    
+
     for (int v = 1; v <= n; v++) {
         if (a[u][v] == 1 && !visited[v]) {
             if (dfs(v, a, visited, path)) return true;
@@ -21,6 +21,7 @@ bool dfs(int u, vector<vector<int>> a, vector<bool> &visited, vector<int>& path)
     }
     
     path.pop_back();
+    visited[u] = false;
     return false;
 }
 
