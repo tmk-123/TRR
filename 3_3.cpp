@@ -1,4 +1,6 @@
-#include<bits/stdc++.h>
+#include<iostream>
+#include<vector>
+#include<queue>
 
 using namespace std;
 
@@ -12,7 +14,7 @@ int main() {
         }
     }
     
-    vector<bool> visited;
+    vector<bool> visited(n + 1, false);
     queue<int> q;
     q.push(1);
     visited[1] = true;
